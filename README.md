@@ -6,7 +6,7 @@ include Vault agent, Secrets Storage CSI driver and K8s Secrets.
 ## Prerequisites
 
 ```shell
-brew install colima kubernetes-cli terraform vault
+brew install colima jq kubernetes-cli terraform vault
 ```
 
 ## Setup
