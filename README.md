@@ -29,7 +29,6 @@ Run a shell in the `busybox` container to inspect the various mounts and environ
 
 ```shell
 k exec -it deploy/busybox -- sh
-env | grep CSI_SECRET
 ls -al /home/nonroot
 cat /home/nonroot/config && echo
 cat /home/nonroot/token && echo
@@ -39,6 +38,7 @@ cat /mnt/secret-subpath && echo
 ls -al /mnt/csi
 cat /mnt/csi/username && echo
 cat /mnt/csi/password && echo
+env | grep CSI_SECRET
 ```
 
 ## Secret Rotation

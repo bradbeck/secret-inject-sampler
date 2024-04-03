@@ -31,10 +31,10 @@ spec:
       - name: busybox
         image: cgr.dev/chainguard/busybox
         command:
-        - sh
-        - -c
+        - /bin/sh
+        - -ec
         args:
-        - source /home/nonroot/config && sleep infinity
+        - ln -sf /home/nonroot/token /home/nonroot/.vault-token && source /home/nonroot/config && sleep infinity
         env:
         - name: CSI_SECRET_USER
           valueFrom:
